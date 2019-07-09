@@ -12,9 +12,34 @@ namespace assignment3.b
         
         static void Main(string[] args)
         {
-            var a = new InputNames();
-            a.Run();
-            new PlayWithStacks().Run();
+            // var a = new InputNames();
+            //a.Run();
+            //new PlayWithStacks().Run();
+            var z = new Grapefruit();
+            z.Run();
+        }
+    }
+    class Blueberry
+    {
+       
+        public string StudentName;
+        public string StudentNumber;
+        public Blueberry Link;
+    }
+    class Grapefruit
+    {
+        //Grape fruit is the office Manager!
+        Blueberry Head;
+        Blueberry Node;
+        public void Run()
+        {
+            Head = new Blueberry();
+
+            Node = new Blueberry();
+            Node.StudentName = "joe";
+            Node.StudentNumber = "A101";
+            Head.Link = Node;
+            
         }
     }
 
@@ -71,7 +96,7 @@ namespace assignment3.b
             {
                 names.Push(item);
             }
-           // names.Push((InputNames.GetQueue()).Dequeue());
+           names.Push((InputNames.GetQueue()).Dequeue());
         }
     }
 }
